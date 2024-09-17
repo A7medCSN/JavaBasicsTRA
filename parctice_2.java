@@ -150,6 +150,8 @@ int totalRows=5;
             if (n%2==0) System.out.println(n);
 
         }*/
+
+        System.out.println("COMMIT");
     }
 }
 
