@@ -1,8 +1,10 @@
+import java.util.Scanner;
 public class FactorialCalculation {
     public static void main(String[] args){
 
-
-        int input1=3;
+Scanner scan=new Scanner(System.in);
+        System.out.println("enter number to find the factorial:");
+        int input1= scan.nextInt();
         int fact1=1;
         while (input1>0){
 
