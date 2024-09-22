@@ -12,10 +12,11 @@ public class longestWord {
 
     public static String longesrWord(String s){
         String [] wordsInSentence= s.split(" ");
-        String longestWord="";
+        int lengthWord=0;
+        String longestWord = "";
 
         for (String word:wordsInSentence){
-            if(word.length()>longestWord.length()){
+            if(word.length()>lengthWord){
                 longestWord=word;
             }
         }
