@@ -12,7 +12,7 @@ public class FindtheFirstRepeatedCharacter {
         char repeatedChar = 0;
         char [] letters= str.toCharArray();
 
-        for(int i=0; i<letters.length;i++){
+        for(int i=0; i<letters.length-1;i++){
             if(letters[i]==letters[i+1]){
                 repeatedChar=letters[i];
                 break;
