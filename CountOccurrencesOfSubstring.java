@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class CountOccurrencesOfSubstring {
     public static void main(String[] args) {
 
@@ -17,9 +18,10 @@ public class CountOccurrencesOfSubstring {
         String[] phraseWords = str.split(" ");
 
         for (String s : phraseWords) {
-           if ( str.contains(substr) == true ){
-               occurrenceOfSubstring++;
-           }
+            if (s.contains(substr) == true) {
+                occurrenceOfSubstring++;
+
+            }
         }
         System.out.println("occurrence= " + occurrenceOfSubstring);
         return occurrenceOfSubstring;
