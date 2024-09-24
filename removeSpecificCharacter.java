@@ -21,7 +21,12 @@ public class removeSpecificCharacter {
              newStr.append(c);
             }
         }
-
+        /* there is more easy way to do that
+        String str;
+        String ch; // character will be declared as string not char.
+        a=a.replace(c,"");
+        System.out.println(a);
+*/
         System.out.println("after remove:" + newStr);
         return newStr;
     }
