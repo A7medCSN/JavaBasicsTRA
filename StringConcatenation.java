@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class StringConcatenation {
     public static void main(String[] args) {
 
@@ -7,23 +8,25 @@ public class StringConcatenation {
         String str1 = scan.nextLine();
         System.out.println("enter second string:");
         String str2 = scan.nextLine();
-        Concatenate(str1, str2);
+        concatenateStrings(str1, str2);
     }
 
-    public static void Concatenate(String str1, String str2) {
-        String concStr;
+    public static void concatenateStrings(String str1, String str2) {
+        String concStrIfEqual;
+        String concStrIfNotEqual1;
+        String concStrIfNotEqual2;
 
         if (str1.length() == str2.length()) {
-            concStr = str1.concat(str2);
-            System.out.println(concStr);
+            concStrIfEqual = str1.concat(str2);
+            System.out.println("after concatenating: " + concStrIfEqual);
         } else if (str1.length() > str2.length()) {
-            str1 = str1.substring(str1.length() - str2.length(), str1.length());
-            concStr = str1.concat(str2);
-            System.out.println(concStr);
-        } else if (str1.length() < str2.length()) {
-            str2 = str2.substring(str2.length() - str1.length(), str2.length());
-            concStr = str1.concat(str2);
-            System.out.println("after concatenating: " + concStr);
+            str1 = str1.substring(str1.length() - str2.length());
+            concStrIfNotEqual1 = str1.concat(str2);
+            System.out.println("after concatenating: " + concStrIfNotEqual1);
+        } else {
+            str2 = str2.substring(str2.length() - str1.length());
+            concStrIfNotEqual2 = str1.concat(str2);
+            System.out.println("after concatenating: " + concStrIfNotEqual2);
         }
     }
 }
