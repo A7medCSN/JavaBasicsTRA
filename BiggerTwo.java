@@ -14,7 +14,7 @@ public class BiggerTwo {
         } else if ((firstArray[0] + firstArray[1]) < (secondArray[0] + secondArray[1])) {
             System.out.println(Arrays.toString(secondArray));
         } else {
-            System.out.println("equal sum");
+            System.out.println(Arrays.toString(firstArray));
         }
     }
 }
