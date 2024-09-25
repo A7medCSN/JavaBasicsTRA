@@ -10,10 +10,9 @@ public class CommonEnd {
         boolean isEndElementSame;
         if (firstArray[0] == secondArray[0] || firstArray[firstArray.length - 1] == secondArray[secondArray.length - 1]) {
             isEndElementSame = true;
-            System.out.println(isEndElementSame);
         } else {
             isEndElementSame = false;
-            System.out.println(isEndElementSame);
         }
+        System.out.println(isEndElementSame);
     }
 }
