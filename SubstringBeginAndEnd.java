@@ -6,10 +6,10 @@ public class SubstringBeginAndEnd {
         Scanner scan = new Scanner(System.in);
         System.out.println("enter a string:");
         String str = scan.nextLine();
-        without2(str);
+        removeFirst2Character(str);
     }
 
-    public static void without2(String str) {
+    public static void removeFirst2Character(String str) {
 
         Scanner scan = new Scanner(System.in);
         String newStr;
