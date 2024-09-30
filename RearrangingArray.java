@@ -18,8 +18,8 @@ public class RearrangingArray {
                 tempStore = arrayA[i + 1];
                 arrayA[i + 1] = 4;
                 arrayA[number4Location] = tempStore;
-                System.out.println(Arrays.toString(arrayA));
             }
         }
+         System.out.println(Arrays.toString(arrayA));
     }
 }
