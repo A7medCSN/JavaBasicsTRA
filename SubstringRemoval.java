@@ -1,9 +1,15 @@
 public class SubstringRemoval {
     public static void main(String[] args) {
 
-        String baseString = "Hello there";
-        String removedString = "x";
-        String newString = baseString.replace(removedString, "");
+      removeSubstringFromString("Hello there", "llo");
+      removeSubstringFromString("Hello there", "e");
+      removeSubstringFromString("Hello there", "x");
+      removeSubstringFromString("Hello there", "H");
+
+    }
+    public static void removeSubstringFromString(String baseString, String removedString){
+        String newString = baseString.replaceAll("(?i)"+removedString, "");
+        // "(?i)" used for case case-insensitive
         System.out.println(newString);
     }
 }
