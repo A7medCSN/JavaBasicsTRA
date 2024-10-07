@@ -1,24 +1,22 @@
 public class IsLetterGHappyOrNot {
     public static void main(String[] args) {
-
-        String str = "xxgx";
-        gHappy(str);
-
+        String str = "xxgggx";
+        System.out.println(gHappy(str));
     }
 
-    public static void gHappy(String str) {
-
-        boolean isHappy = false;
-        char[] letters = str.toCharArray();
-
-        for (int i = 1; i < letters.length - 1; i++) {
-            if (letters[i] == 'g' && letters[i + 1] == 'g' || letters[i] == 'g' && letters[i - 1] == 'g') {
-                isHappy = true;
-            }
-            else {
-                isHappy = false;
+    public static boolean gHappy(String str) {
+        if (str.length() == 0) {
+            return true;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'g') {
+                boolean leftHappy = (i > 0 && str.charAt(i - 1) == 'g');
+                boolean rightHappy = (i < str.length() - 1 && str.charAt(i + 1) == 'g');
+                if (!leftHappy && !rightHappy) {
+                    return false;
+                }
             }
         }
-        System.out.println(isHappy);
+        return true;
     }
 }
