@@ -1,7 +1,8 @@
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class StackImplementationUsingArray {
-    static ArrayList<Integer> numbers = new ArrayList<>();
+    static int[] stack = new int[5];
+    static int top = -1;
 
     public static void main(String[] args) {
         push(20);
@@ -16,25 +17,47 @@ public class StackImplementationUsingArray {
     }
 
     public static void print() {
-        System.out.println("printing the stack: " + numbers);
+        if (top == -1) {
+            System.out.println("Stack is empty");
+        }
+        else {
+            System.out.print("printing the stack: ");
+            for (int i = 0; i <= top; i++) {
+                System.out.print(stack[i] + " ");
+            }
+            System.out.println();
+        }
     }
 
-    public static void push(Integer element) {
-        numbers.addFirst(element);
+    public static void push(int element) {
+        if (top == stack.length - 1) {
+            System.out.println("Stack overflow. Cannot push " + element);
+        }
+        else {
+            stack[++top] = element;
+        }
     }
 
     public static void pop() {
-        Integer removedElement = numbers.removeFirst();
-        System.out.println("popping element");
-        System.out.println("popped element is: " + removedElement);
+        if (top == -1) {
+            System.out.println("Stack is empty. Cannot pop.");
+        }
+        else {
+            int removedElement = stack[top--];
+            System.out.println("popped element is: " + removedElement);
+        }
     }
 
     public static void isEmpty() {
-        System.out.println("Is stack empty? " + numbers.isEmpty());
+        System.out.println("Is stack empty? " + (top == -1));
     }
 
     public static void peek() {
-        System.out.println("element on the top of stack= " + numbers.getFirst());
-
+        if (top == -1) {
+            System.out.println("Stack is empty.");
+        }
+        else {
+            System.out.println("element on the top of stack= " + stack[top]);
+        }
     }
 }
