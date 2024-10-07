@@ -1,19 +1,18 @@
 public class LongestMirrorImage {
+
     public static void main(String[] args) {
-
-        String str1 = "sdnhkds"; // original string
-        String str2 = "sdkhnds"; // the mirror string
-        mirrorEnds(str1, str2);
-
+        String str1 = "abXYZba";
+        mirrorEnds(str1);
     }
 
-    public static void mirrorEnds(String str1, String str2) {
-        char[] letters1 = str1.toCharArray();
-        char[] letters2 = str2.toCharArray();
+    public static void mirrorEnds(String str) {
+        char[] letters = str.toCharArray();
         StringBuilder mirrorCharacters = new StringBuilder();
-        for (int i = 0; i < letters1.length; i++) {
-            if (letters1[i] == letters2[i]) {
-                mirrorCharacters.append(letters1[i]);
+
+        int length = letters.length;
+        for (int i = 0; i < length; i++) {
+            if (letters[i] == letters[length - i - 1]) {
+                mirrorCharacters.append(letters[i]);
             } else {
                 break;
             }
