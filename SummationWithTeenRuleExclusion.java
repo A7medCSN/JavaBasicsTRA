@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
 public class SummationWithTeenRuleExclusion {
     public static void main(String[] args) {
 
@@ -11,16 +12,10 @@ public class SummationWithTeenRuleExclusion {
     public static ArrayList<Integer> getUserInput() {
         Scanner scan = new Scanner(System.in);
         ArrayList<Integer> numbers = new ArrayList<>();
-        System.out.println("enter integer elements, enter -1 to stop:");
-        Integer inputForArray = scan.nextInt();
-
-        while (true) {
-            if (inputForArray != -1) {
-                numbers.add(inputForArray);
-                inputForArray = scan.nextInt();
-            } else {
-                break;
-            }
+        System.out.println("enter 3 integer elements:");
+        for (int i = 0; i < 3; i++) {
+            Integer inputForArray = scan.nextInt();
+            numbers.add(inputForArray);
         }
         return numbers;
     }
