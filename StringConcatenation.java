@@ -12,21 +12,18 @@ public class StringConcatenation {
     }
 
     public static void concatenateStrings(String str1, String str2) {
-        String concStrIfEqual;
-        String concStrIfNotEqual1;
-        String concStrIfNotEqual2;
+        String concStr;
 
         if (str1.length() == str2.length()) {
-            concStrIfEqual = str1.concat(str2);
-            System.out.println("after concatenating: " + concStrIfEqual);
+            concStr = str1.concat(str2);
         } else if (str1.length() > str2.length()) {
             str1 = str1.substring(str1.length() - str2.length());
-            concStrIfNotEqual1 = str1.concat(str2);
-            System.out.println("after concatenating: " + concStrIfNotEqual1);
+            concStr = str1.concat(str2);
         } else {
             str2 = str2.substring(str2.length() - str1.length());
-            concStrIfNotEqual2 = str1.concat(str2);
-            System.out.println("after concatenating: " + concStrIfNotEqual2);
+            concStr = str1.concat(str2);
+
         }
+        System.out.println("after concatenating: " + concStr);
     }
 }
