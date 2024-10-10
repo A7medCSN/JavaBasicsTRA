@@ -8,10 +8,20 @@ public class CommonCharactersInStrings {
         getCommonCharactersInTwoStrings(firstWord, secondWord);
     }
 
+    public static Character[] covertStringToCharArray(String str) {
+
+        char[] lettersOfFirstWord = str.toCharArray();
+        Character[] letters1 = new Character[lettersOfFirstWord.length];
+        for (int i = 0; i < lettersOfFirstWord.length; i++) {
+            letters1[i] = lettersOfFirstWord[i];
+        }
+        return letters1;
+    }
+
     public static void getCommonCharactersInTwoStrings(String firstWord, String secondWord) {
 
-        List<Character> firstList = Arrays.asList(HelperUtils.convertStringToCharacterArray(firstWord));
-        List<Character> secondList = Arrays.asList(HelperUtils.convertStringToCharacterArray(secondWord));
+        List<Character> firstList = new ArrayList<>(List.of(covertStringToCharArray(firstWord)));
+        List<Character> secondList = new ArrayList<>(List.of(covertStringToCharArray(secondWord)));
         Set<Character> repeatedCharacter = new HashSet<>(firstList);
         repeatedCharacter.retainAll(secondList);
         System.out.println(repeatedCharacter);
