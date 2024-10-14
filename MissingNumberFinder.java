@@ -1,6 +1,7 @@
+import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
+
 
 public class MissingNumberFinder {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class MissingNumberFinder {
 
     public static void findMissingNumberInSequence() {
 
-        Set<Integer> orderedNumbers = new HashSet<>(List.of(0, 1, 6, 5, 4, 3));
+        Set<Integer> orderedNumbers = Set.of(0, 1, 6, 5, 4, 3);
         System.out.println(orderedNumbers);
         // this way is giving me 2*n complexity
         Integer sumOfOrderedNumbers = 0;

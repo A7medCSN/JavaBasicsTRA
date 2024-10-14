@@ -5,7 +5,7 @@ import java.util.Set;
 public class FirstRepeatedElement {
     public static void main(String[] args) {
 
-        List<Integer> listOfNumbers = List.of(1, 2, 3, 4, 5, 1, 3);
+        List<Integer> listOfNumbers = List.of(1, 2, 3, 4, 5, 3, 3);
         findFirstRepeatedNumber(listOfNumbers);
     }
 
@@ -13,7 +13,7 @@ public class FirstRepeatedElement {
 
         Set<Integer> nonRepeatedListOfNumber = new HashSet<>();
         for (Integer i : listOfNumbers) {
-            if (nonRepeatedListOfNumber.contains(i)) {
+            if (!nonRepeatedListOfNumber.add(i)) {
                 System.out.println("First repeated number is: " + i);
                 return;
             }
