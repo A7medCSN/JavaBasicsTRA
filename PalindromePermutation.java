@@ -5,7 +5,7 @@ import java.util.Set;
 public class PalindromePermutation {
     public static void main(String[] args) {
 
-        String wordToCheck = "taco cat";
+        String wordToCheck = "hello";
         isPalindrome(wordToCheck);
 
 
@@ -27,7 +27,7 @@ public class PalindromePermutation {
         }
         System.out.println("letters repeating odd number of time: " + letters);
 
-        if (letters.size() >= 1) {
+        if (letters.size() <= 1) {
             System.out.println("Can the word be Palindrome: " + true);
 
         } else System.out.println("Can the word be Palindrome: " + false);
