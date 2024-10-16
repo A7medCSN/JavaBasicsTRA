@@ -1,4 +1,4 @@
-public class MaximumNumberInArray {
+public class FindingMaximuminArray {
     public static void main(String[] args){
 
 

@@ -4,7 +4,7 @@ import java.util.Stack;
 public class StringReversionUsingStacks {
     public static void main(String[] args) {
 
-        String str = "Any String";
+        String str = "pollop";
         reversingString(str);
 
     }

@@ -6,7 +6,7 @@ public class DuplicateParenthesesChecker {
 
     public static void main(String[] args) {
 
-        String str = "((a+b)+(c+d))";
+        String str = "((a+b))";
         checkIfParenthesesAreDuplicate(str);
     }
 
