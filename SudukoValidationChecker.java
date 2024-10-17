@@ -37,7 +37,8 @@ public class SudukoValidationChecker {
 
                 // check for any invalid condition
                 if (rows[i].contains(num) || cols[j].contains(num) || boxes[(i / 3) * 3 + j / 3].contains(num)) {
-                    System.out.println(false);
+                    System.out.println("Is Sudoku Valid? "+false);
+                    return;
                 }
 
                 // add number to set if no duplication
@@ -47,6 +48,6 @@ public class SudukoValidationChecker {
             }
         }
 
-        System.out.println(true);
+        System.out.println("Is Sudoku Valid? "+true);
     }
 }

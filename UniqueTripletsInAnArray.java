@@ -1,8 +1,4 @@
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.ArrayList;
+import java.util.*;
 
 public class UniqueTripletsInAnArray {
 
@@ -19,7 +15,7 @@ public class UniqueTripletsInAnArray {
             for (int j = i + 1; j < numbers.size() - 1; j++) {
                 for (int k = j + 1; k < numbers.size(); k++) {
                     if (numbers.get(i) + numbers.get(j) + numbers.get(k) == 0) {
-                        List<Integer> triplets = new ArrayList<>(List.of(numbers.get(i), numbers.get(j), numbers.get(k)));
+                        List<Integer> triplets = Arrays.asList(numbers.get(i), numbers.get(j), numbers.get(k));
                         Collections.sort(triplets);
                         uniqueTriplets.add(triplets);
                     }
