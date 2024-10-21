@@ -10,13 +10,13 @@ public class EqualValuesBothKeysGone {
         lettersRepresentation.put("c", "ccc");
         lettersRepresentation.put("a", "bbb");
         System.out.println("Map before modification: " + lettersRepresentation);
-        removeKeysIfHsSameValues(lettersRepresentation);
+        removeKeysIfHasSameValues(lettersRepresentation);
     }
 
-    public static void removeKeysIfHsSameValues(Map<String, String> lettersRepresentation) {
+    public static void removeKeysIfHasSameValues(Map<String, String> lettersRepresentation) {
 
         if (lettersRepresentation.containsKey("b") && lettersRepresentation.containsKey("a")
-                && lettersRepresentation.get("a") == lettersRepresentation.get("b")) {
+                && lettersRepresentation.get("a").equals(lettersRepresentation.get("b"))) {
             lettersRepresentation.remove("a");
             lettersRepresentation.remove("b");
             System.out.println("Map after modification: " + lettersRepresentation);
