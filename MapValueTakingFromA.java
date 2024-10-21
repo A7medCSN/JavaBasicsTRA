@@ -9,10 +9,10 @@ public class MapValueTakingFromA {
         lettersRepresentation.put('b', "bbb");
         lettersRepresentation.put('c', "ccc");
         lettersRepresentation.put('a', "www");
-        replaceAndRemoveFromHashMap(lettersRepresentation);
+        getValueOfA(lettersRepresentation);
     }
 
-    public static void replaceAndRemoveFromHashMap(Map<Character, String> lettersRepresentation) {
+    public static void getValueOfA(Map<Character, String> lettersRepresentation) {
 
         System.out.println("Map before modification: " + lettersRepresentation);
         if (lettersRepresentation.containsKey('b')) {
