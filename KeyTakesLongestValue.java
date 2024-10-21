@@ -9,10 +9,10 @@ public class KeyTakesLongestValue {
         lettersRepresentation.put("c", "cake");
         lettersRepresentation.put("a", "aaa");
         System.out.println("Map before modification: " + lettersRepresentation);
-        getLongestValueForKey(lettersRepresentation);
+        removeKeysIfHsSameValues(lettersRepresentation);
     }
 
-    public static void getLongestValueForKey(Map<String, String> lettersRepresentation) {
+    public static void removeKeysIfHsSameValues(Map<String, String> lettersRepresentation) {
 
         if ((lettersRepresentation.containsKey("b") && lettersRepresentation.containsKey("a"))) {
             if (lettersRepresentation.get("a").length() > lettersRepresentation.get("b").length()) {

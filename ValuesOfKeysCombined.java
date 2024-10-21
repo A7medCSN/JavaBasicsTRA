@@ -4,17 +4,13 @@ import java.util.Map;
 public class ValuesOfKeysCombined {
     public static void main(String[] args) {
 
-        Map<String, String> lettersRepresentation = new HashMap<>();
-        lettersRepresentation.put("n", "nnn");
-        lettersRepresentation.put("b", "bbb");
-        lettersRepresentation.put("c", "ccc");
-        lettersRepresentation.put("a", "www");
+        Map<String, String> lettersRepresentation = HelperUtils.getUserInputForHashMap();
         System.out.println("Map before modification: " + lettersRepresentation);
         combineValueOfKeys(lettersRepresentation);
     }
 
     public static void combineValueOfKeys(Map<String, String> lettersRepresentation) {
-        
+
         if (lettersRepresentation.containsKey("b") && lettersRepresentation.containsKey("a")) {
             lettersRepresentation.put("ab", lettersRepresentation.get("a") + lettersRepresentation.get("b"));
             System.out.println("Map after modification: " + lettersRepresentation);
