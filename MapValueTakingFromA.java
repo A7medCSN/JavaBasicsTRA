@@ -9,18 +9,19 @@ public class MapValueTakingFromA {
         lettersRepresentation.put('b', "bbb");
         lettersRepresentation.put('c', "ccc");
         lettersRepresentation.put('a', "www");
-        getValueOfA(lettersRepresentation);
+        System.out.println("Map before modification: " + lettersRepresentation);
+        updateMapWithAValue(lettersRepresentation);
     }
 
-    public static void getValueOfA(Map<Character, String> lettersRepresentation) {
+    public static void updateMapWithAValue(Map<Character, String> lettersRepresentation) {
 
-        System.out.println("Map before modification: " + lettersRepresentation);
-        if (lettersRepresentation.containsKey('b')) {
-            if (lettersRepresentation.containsKey('a')) {
-                lettersRepresentation.put('b', lettersRepresentation.get('a'));
-                lettersRepresentation.put('a', "");
-            }
+        if (lettersRepresentation.containsKey('b') && lettersRepresentation.containsKey('a')) {
+            lettersRepresentation.put('b', lettersRepresentation.get('a'));
+            lettersRepresentation.put('a', "");
+            System.out.println("Map after modification: " + lettersRepresentation);
+        } else {
+            System.out.println("there is no modification");
         }
-        System.out.println("Map after modification: " + lettersRepresentation);
+
     }
 }
