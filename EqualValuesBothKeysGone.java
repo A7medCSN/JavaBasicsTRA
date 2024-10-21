@@ -4,11 +4,7 @@ import java.util.Map;
 public class EqualValuesBothKeysGone {
     public static void main(String[] args) {
 
-        Map<String, String> lettersRepresentation = new HashMap<>();
-        lettersRepresentation.put("n", "nnn");
-        lettersRepresentation.put("b", "bbb");
-        lettersRepresentation.put("c", "ccc");
-        lettersRepresentation.put("a", "bbb");
+        Map<String, String> lettersRepresentation = HelperUtils.getUserInputForHashMap();
         System.out.println("Map before modification: " + lettersRepresentation);
         removeKeysIfHasSameValues(lettersRepresentation);
     }
