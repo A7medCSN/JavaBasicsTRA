@@ -9,17 +9,20 @@ public class ValuesOfKeysCombined {
         lettersRepresentation.put("b", "bbb");
         lettersRepresentation.put("c", "ccc");
         lettersRepresentation.put("a", "www");
-        combineValueOfAAndB(lettersRepresentation);
+        System.out.println("Map before modification: " + lettersRepresentation);
+        combineValueOfKeys(lettersRepresentation);
     }
 
-    public static void combineValueOfAAndB(Map<String, String> lettersRepresentation) {
-
-        System.out.println("Map before modification: " + lettersRepresentation);
+    public static void combineValueOfKeys(Map<String, String> lettersRepresentation) {
+        
         if (lettersRepresentation.containsKey("b") && lettersRepresentation.containsKey("a")) {
             lettersRepresentation.put("ab", lettersRepresentation.get("a") + lettersRepresentation.get("b"));
-
+            System.out.println("Map after modification: " + lettersRepresentation);
+        } else if ((!lettersRepresentation.containsKey("b") && !lettersRepresentation.containsKey("a"))) {
+            System.out.println("both keys a and b are missing");
+        } else {
+            System.out.println("there is no modification");
         }
-        System.out.println("Map after modification: " + lettersRepresentation);
     }
 }
 
