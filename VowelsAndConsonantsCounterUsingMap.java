@@ -31,7 +31,14 @@ public class VowelsAndConsonantsCounterUsingMap {
                 consonantsCharsMap.put(seenCharacter, 1);
             }
         }
-        System.out.println("Vowels: " + vowelsCharsMap);
-        System.out.println("Consonants: " + consonantsCharsMap);
+        System.out.println("Vowels: ");
+        for (Map.Entry<Character, Integer> vowel : vowelsCharsMap.entrySet()) {
+            System.out.println(vowel.getKey() + ": " + vowel.getValue());
+        }
+        System.out.println("Consonants: ");
+        for (Map.Entry<Character, Integer> consonant : consonantsCharsMap.entrySet()) {
+            System.out.println(consonant.getKey() + ": " + consonant.getValue());
+        }
     }
 }
+
