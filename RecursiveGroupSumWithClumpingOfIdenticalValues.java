@@ -3,10 +3,10 @@ import java.util.List;
 public class RecursiveGroupSumWithClumpingOfIdenticalValues {
     public static void main(String[] args) {
 
-        System.out.println(groupNoAdj(0, List.of(3, 3, 2, 1), 5));
+        System.out.println(groupSumClump(0, List.of(3, 3, 2, 1), 5));
     }
 
-    public static Boolean groupNoAdj(Integer start, List<Integer> num, Integer target) {
+    public static Boolean groupSumClump(Integer start, List<Integer> num, Integer target) {
 
         if (target == 0) {
             return true;
@@ -25,11 +25,11 @@ public class RecursiveGroupSumWithClumpingOfIdenticalValues {
         }
 
         //include clump
-        if (groupNoAdj(start + count, num, target - sumOfClump)) {
+        if (groupSumClump(start + count, num, target - sumOfClump)) {
             return true;
         }
         // exclude clump
-        return groupNoAdj(start + count, num, target);
+        return groupSumClump(start + count, num, target);
     }
 }
 
