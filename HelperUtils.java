@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
@@ -35,6 +36,25 @@ public class HelperUtils {
         }
 
         return userMap;
+    }
+    public static List<Integer> getUserInputList() {
+        Scanner scanner = new Scanner(System.in);
+        List<Integer> numList = new ArrayList<>();
+
+        System.out.println("Enter numbers (type 'done' to finish):");
+
+        while (scanner.hasNext()) {
+            if (scanner.hasNextInt()) {
+                numList.add(scanner.nextInt());
+            } else if (scanner.next().equalsIgnoreCase("done")) {
+                break;
+            } else {
+                System.out.println("Invalid input. Please enter an integer or 'done' to finish.");
+            }
+        }
+
+        scanner.close();
+        return numList;
     }
 
 }
